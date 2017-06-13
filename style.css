@@ -25,3 +25,10 @@ body{
     background-color: #4CAF50;
     color: white;
 }
+
+.imagediv {
+  width: 150px;
+  height: 170px;
+  float: left;
+  padding: 0px -19px;
+}
