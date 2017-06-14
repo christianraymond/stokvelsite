@@ -8,7 +8,12 @@ body{
 }
 
 
-.button-primary
-{
-  margin-top: 100px;
+.button-primary {
+
+}
+
+
+.alabel {
+  display: inline-block;
+  width : 30%;
 }
