@@ -21,12 +21,23 @@ function expectedMonthlyContributions(members,amount) {
   var data = [];
   var prevMonth = 0;
   for(var i=0; i<12; i++){
-    data.push(prevMonth+10*200);
-    prevMonth = prevMonth+10*200;
+    data.push(prevMonth+members*amount);
+    prevMonth = prevMonth+members*amount;
   }
   console.log(data);
   return data;
 }
-function graphData() {
-
+function updateRealityGraph() {
+  var inputBoxes = document.querySelectorAll(".amounts");
+  var realityData = [];
+  for(var i=0; i<inputBoxes.length; i++){
+    realityData.push(Number(inputBoxes[i].value));
+  }
+  console.log(realityData);
+  return realityData;
+}
+function updateIdealGraph() {
+  var members = document.querySelector("#noOfMembers");
+  var monthlyAmount = document.querySelector("#monthlyAmmount");
+  return expectedMonthlyContributions(Number(members.value),Number(monthlyAmount.value));
 }
