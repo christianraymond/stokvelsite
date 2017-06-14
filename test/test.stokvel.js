@@ -22,7 +22,7 @@ describe('Our stokvel app', function(){
   it("Should calculate expected monthly contributions",function(){
     assert.deepEqual([2000, 4000, 6000,8000,10000,12000,14000,16000,18000,20000,22000,24000], expectedMonthlyContributions(10, 200));
   });
-  it('should be able to create a data structure for the ideal graph', function(){
+  it('Should update reality graphs everytime data changes', function(){
     assert.equal(2,1);
   });
   it('should be able to create a data structure for the graph in reality', function(){

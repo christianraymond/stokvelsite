@@ -14,15 +14,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 
   <ul class="topnav">
-    <li><a href="https://www.jumo.world/contact.htm">Contact</a></li>
-    <li class="right"><a href="https://www.jumo.world/about.htm">About</a></li>
-     <li><a class="active" href="https://www.jumo.world/">Home</a></li>
+    <li><a href="">Contact</a></li>
+    <li class="right"><a href="">About</a></li>
+     <li><a class="active" href="">Home</a></li>
   </ul>
-
 </head>
 
 <body>
   <div class="container">
+
+    <div class="row">
+      <div class="six columns">
+        <h5>Raising amount:</h5>
+        <div class="data">
+          <canvas id="graph" width="300" height="200"></canvas>
+        </div>
+      </div>
+
+      <div class="six columns">
+        <div class="">
+          <h5>Reality Amount</h5>
+          <div class="data">
+            <canvas id="graph2" width="300" height="200"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <!--First half of the screen  -->
     <div class="row">
@@ -50,7 +68,7 @@
         </div>
         <div class="row">
           <div class="three columns">
-            <input class="button-primary" type="submit" value="Calculate">
+            <input class="button-primary" type="submit" onclick="updateIdealGraph()" value="Calculate">
           </div>
         </div>
 
@@ -62,116 +80,103 @@
         <!-- Second half of page -->
         <div class="row">
           <div class="twelve columns">
-            <div class="six columns">
-
-              <!-- Second half of page -->
-              <div class="row">
-
-                <div class="twelve columns">
-                  <label class="alabel" for="monthOne">Month 1:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthOne">
-                </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthOne">Month 1:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthOne">
               </div>
+            </div>
 
               <div class="row">
                 <div class="twelve columns">
                   <label class="alabel" for="monthTwo">Month 2:</label>
                   <input class="amounts" type="text" placeholder="" id="monthTwo">
                 </div>
-              </div>
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthThree">Month 3:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthThree">
-                </div>
-              </div>
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthFour">Month 4:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthFour">
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthFive">Month 5:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthFive">
-                </div>
-              </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthTwo">Month 2:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthTwo">
 
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthSix">Month 6:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthSix">
-                </div>
               </div>
-
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthSeven">Month 7:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthSeven">
-                </div>
+            </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthThree">Month 3:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthThree">
               </div>
-
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthEight">Month 8:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthEight">
-                </div>
+            </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthFour">Month 4:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthFour">
               </div>
+            </div>
 
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthNine">Month 9:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthNine">
-                </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthFive">Month 5:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthFive">
               </div>
+            </div>
 
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthTen">Month 10:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthTen">
-                </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthSix">Month 6:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthSix">
               </div>
+            </div>
 
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthEleven">Month 11:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthEleven">
-                </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthSeven">Month 7:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthSeven">
               </div>
+            </div>
 
-              <div class="row">
-                <div class="twelve columns">
-                  <label class="alabel" for="monthTwelve">Month 12:</label>
-                  <input class="amounts" type="text" placeholder="" id="monthTwelve">
-                </div>
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthEight">Month 8:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthEight">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthNine">Month 9:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthNine">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthTen">Month 10:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthTen">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthEleven">Month 11:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthEleven">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="twelve columns">
+                <label class="alabel" for="monthTwelve">Month 12:</label>
+                <input class="amounts" onchange="updateRealityGraph()" type="number" placeholder="" id="monthTwelve">
               </div>
             </div>
           </div>
         </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="six columns">
-      <h5>Raising amount:</h5>
-      <div class="data">
-        <canvas id="graph" width="300" height="200"></canvas>
-      </div>
-    </div>
-
-    <div class="six columns">
-      <div class="">
-        <h5>Reality Amount</h5>
-        <div class="data">
-          <canvas id="graph2" width="300" height="200"></canvas>
-        </div>
       </div>
 
-    </div>
-  </div>
 
-  <script src="./stockvelGraph/graph.js" charset="utf-8"></script>
+      <script src="./stockvelGraph/graph.js" charset="utf-8"></script>
+      <script src="stokvel.js" charset="utf-8"></script>
+
 </body>
 
 </html>
