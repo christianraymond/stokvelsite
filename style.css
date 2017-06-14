@@ -10,5 +10,11 @@ body{
 
 .button-primary
 {
-  margin-top: 100px;
+  margin-left: 220px;
+}
+
+
+.alabel {
+  display: inline-block;
+  width : 30%;
 }

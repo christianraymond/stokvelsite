@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.4.2/mocha.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.4.2/mocha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.0.2/chai.js"></script>
+</head>
+
+<body>
+  <div id="mocha"></div>
+  <script>
+    var assert = chai.assert;
+    mocha.setup('bdd')
+  </script>
+  <script src="stokvel.js"></script>
+  <script src="test/test.stokvel.js"></script>
+  <script>
+    mocha.checkLeaks();
+    mocha.run();
+  </script>
+</body>
+
+</html>

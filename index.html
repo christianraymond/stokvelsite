@@ -2,39 +2,50 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
   <title>JumoStockvel</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/colors/1.0/colors.min.css" />
-  <link rel="stylesheet" href="style.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+
 </head>
 
 <body>
   <div class="container">
 
+    <!--First half of the screen  -->
     <div class="row">
       <div class="six columns">
+
         <h2>Theory</h2>
 
-        <div class="six columns">
-          <label for="noOfMembers">No. of members:</label>
-          <input class="u-full-width" type="text" placeholder="no. of members" id="noOfMembers">
+        <div class="row">
+          <div class="twelve columns">
+            <label class="alabel" for="noOfMembers">No. of members:</label>
+            <input class="" type="text" placeholder="no. of members" id="noOfMembers">
+          </div>
         </div>
-        <div class="six columns">
-          <label for="monthlyAmmount">Monthly ammount:</label>
-          <input class="u-full-width" type="text" placeholder="monthly ammount" id="monthlyAmmount">
+        <div class="row">
+          <div class="twelve columns">
+            <label class="alabel" for="monthlyAmmount">Monthly ammount:</label>
+            <input class="" type="text" placeholder="monthly ammount" id="monthlyAmmount">
+          </div>
         </div>
-
-        <div class="six columns">
-          <label for="period">Period:</label>
-          <input class="u-full-width" type="text" placeholder="no. of members" id="period">
+        <div class="row">
+          <div class="twelve columns">
+            <label class="alabel" for="period">Period:</label>
+            <input class="" type="text" placeholder="no. of members" id="period">
+          </div>
         </div>
-
-        <div class="two columns">
-          <input class="button-primary" type="submit" value="Calculate">
+        <div class="row">
+          <div class="three columns">
+            <input class="button-primary" type="submit" value="Calculate">
+          </div>
         </div>
 
       </div>
@@ -42,45 +53,121 @@
       <div class="six columns">
         <h2>Reality</h2>
 
-        <div class="six columns">
-          <label for="monthOne">Month 1:</label>
-          <input class="u-full-width" type="text" placeholder="" id="monthOne">
-        </div>
-        <div class="six columns">
-          <label for="monthTwo">Month 2:</label>
-          <input class="u-full-width" type="text" placeholder="" id="monthTwo">
-        </div>
+        <!-- Second half of page -->
+        <div class="twelve columns">
+          <div class="row">
 
-        <div class="six columns">
-          <label for="monthThree">Month 3:</label>
-          <input class="u-full-width" type="text" placeholder="" id="monthThree">
-        </div>
-      </div>
-    </div>
-    <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthOne">Month 1:</label>
+              <input class="" type="text" placeholder="" id="monthOne">
+            </div>
 
-      <div class="six columns">
-        <h5>Raising amount:</h5>
-        <div class="data">
-          <canvas id="graph" width="300" height="200"></canvas>
-        </div>
+          </div>
 
-      </div>
-      <div class="six columns">
-        <div class="">
-          <h5>Reality Amount</h5>
-            <div class="data">
-              <canvas id="graph2" width="300" height="200"></canvas>
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthTwo">Month 2:</label>
+              <input class="" type="text" placeholder="" id="monthTwo">
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthThree">Month 3:</label>
+              <input class="" type="text" placeholder="" id="monthThree">
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthFour">Month 4:</label>
+              <input class="" type="text" placeholder="" id="monthFour">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthFive">Month 5:</label>
+              <input class="" type="text" placeholder="" id="monthFive">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthSix">Month 6:</label>
+              <input class="" type="text" placeholder="" id="monthSix">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthSeven">Month 7:</label>
+              <input class="" type="text" placeholder="" id="monthSeven">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthEight">Month 8:</label>
+              <input class="" type="text" placeholder="" id="monthEight">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthNine">Month 9:</label>
+              <input class="" type="text" placeholder="" id="monthNine">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthTen">Month 10:</label>
+              <input class="" type="text" placeholder="" id="monthTen">
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthEleven">Month 11:</label>
+              <input class="" type="text" placeholder="" id="monthEleven">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <label class="alabel" for="monthTwelve">Month 12:</label>
+              <input class="" type="text" placeholder="" id="monthTwelve">
             </div>
           </div>
 
         </div>
+      </div>
+        <div class="six colums">
+          <div class="row">
 
+            <div class="six columns">
+              <h5>Raising amount:</h5>
+              <div class="data">
+                <canvas id="graph" width="300" height="200"></canvas>
+              </div>
+            </div>
+
+            <div class="six columns">
+              <div class="">
+                <h5>Reality Amount</h5>
+                <div class="data">
+                  <canvas id="graph2" width="300" height="200"></canvas>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-  </div>
-
-  <script src="./stockvelGraph/graph.js" charset="utf-8"></script>
+    <script src="./stockvelGraph/graph.js" charset="utf-8"></script>
 </body>
 
 </html>
