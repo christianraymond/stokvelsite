@@ -35,11 +35,27 @@ function updateRealityGraph() {
     runningTotal += Number(inputBoxes[i].value)
     realityData.push(runningTotal);
   }
-  console.log(realityData);
-  return realityData;
+  //console.log(realityData);
+  realityDataset.datasets[0].data = realityData;
+  realityChart.update();
 }
+
+
 function updateIdealGraph() {
   var members = document.querySelector("#noOfMembers");
   var monthlyAmount = document.querySelector("#monthlyAmmount");
-  return expectedMonthlyContributions(Number(members.value),Number(monthlyAmount.value));
+  var data = expectedMonthlyContributions(Number(members.value),Number(monthlyAmount.value));
+
+  idealDataset.datasets[0].data = data;
+  idealChart.update();
+
+  realityDataset.datasets[1].data = data;
+
+  var amounts = document.querySelectorAll(".amounts");
+  amounts.forEach(function(amount){
+    amount.value = Number(members.value) * Number(monthlyAmount.value);
+  });
+
+  updateRealityGraph();
+
 }

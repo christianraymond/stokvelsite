@@ -5,25 +5,25 @@ var colors = ["Navy", "Blue", "Aqua", "Red",
 
 var ctx1 = document.getElementById("graph").getContext('2d');
 
-var chartData1 = {
+var idealDataset = {
     labels: ["Jan", "Feb", "March",
     "April", "May", "June", "July",
     "Aug", "Sept", "Oct", "Nov", "Dec"],
     datasets: [{
         label: 'Theory',
-        data: [1, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+        data: [],
         backgroundColor: _.take(colors, 12),
     }]
 }
 
-var myChart1 = new Chart(ctx1, {
+var idealChart = new Chart(ctx1, {
     type: 'bar',
-    data: chartData1,
+    data: idealDataset,
     options: {}
 });
 
-chartData1.datasets[0].data.push(0)
-myChart1.update();
+idealDataset.datasets[0].data.push(0)
+idealChart.update();
 
 var colors = ["Navy", "Blue", "Aqua", "Red",
 "Maroon", "Fuchsia", "Teal", "Olive",
@@ -32,30 +32,31 @@ var colors = ["Navy", "Blue", "Aqua", "Red",
 
 var ctx = document.getElementById("graph2").getContext('2d');
 
-var chartData = {
+var realityDataset = {
     labels: ["Jan", "Feb", "March",
     "April", "May", "June", "July",
     "Aug", "Sept", "Oct", "Nov", "Dec"],
     datasets: [
       {
           label: 'Theory',
-          data: [1, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+          data: [],
           backgroundColor: _.take(colors, 12),
       },
       {
         label: 'Reality',
-        data: [1, 4, 6, 8, 10, 12, 14, 16, 7, 8, 22, 19],
+        data: [],
         backgroundColor: _.take(colors, 12),
-    },
+      },
+
 
   ]
 }
 
-var myChart = new Chart(ctx, {
+var realityChart = new Chart(ctx, {
     type: 'bar',
-    data: chartData,
+    data: realityDataset,
     options: {}
 });
 
-chartData.datasets[0].data.push(0)
-myChart.update();
+//chartData.datasets[0].data.push(0)
+//realityChart.update();

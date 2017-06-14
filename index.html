@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>JumoStockvel</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="stokvel.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/colors/1.0/colors.min.css" />
@@ -16,6 +15,25 @@
 
 <body>
   <div class="container">
+
+    <div class="row">
+      <div class="six columns">
+        <h5>Raising amount:</h5>
+        <div class="data">
+          <canvas id="graph" width="300" height="200"></canvas>
+        </div>
+      </div>
+
+      <div class="six columns">
+        <div class="">
+          <h5>Reality Amount</h5>
+          <div class="data">
+            <canvas id="graph2" width="300" height="200"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <!--First half of the screen  -->
     <div class="row">
@@ -140,26 +158,11 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="six columns">
-          <h5>Raising amount:</h5>
-          <div class="data">
-            <canvas id="graph" width="300" height="200"></canvas>
-          </div>
-        </div>
 
-        <div class="six columns">
-          <div class="">
-            <h5>Reality Amount</h5>
-            <div class="data">
-              <canvas id="graph2" width="300" height="200"></canvas>
-            </div>
-          </div>
-
-        </div>
-      </div>
 
       <script src="./stockvelGraph/graph.js" charset="utf-8"></script>
+      <script src="stokvel.js" charset="utf-8"></script>
+
 </body>
 
 </html>
