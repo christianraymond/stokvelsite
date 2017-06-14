@@ -30,8 +30,10 @@ function expectedMonthlyContributions(members,amount) {
 function updateRealityGraph() {
   var inputBoxes = document.querySelectorAll(".amounts");
   var realityData = [];
+  var runningTotal = 0;
   for(var i=0; i<inputBoxes.length; i++){
-    realityData.push(Number(inputBoxes[i].value));
+    runningTotal += Number(inputBoxes[i].value)
+    realityData.push(runningTotal);
   }
   console.log(realityData);
   return realityData;
