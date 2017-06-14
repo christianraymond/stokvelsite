@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>JumoStockvel</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/colors/1.0/colors.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 </head>
 
 <body>
   <div class="container">
 
     <div class="row">
+      <div class="six columns">
+        <h2>Theory</h2>
+
         <div class="six columns">
-          <h2>Theory</h2>
-
-          <div class="six columns">
-            <label for="noOfMembers">No. of members:</label>
-            <input class="u-full-width" type="text" placeholder="no. of members" id="noOfMembers">
-          </div>
-          <div class="six columns">
-            <label for="monthlyAmmount">Monthly ammount:</label>
-            <input class="u-full-width" type="text" placeholder="monthly ammount" id="monthlyAmmount">
-          </div>
-
-          <div class="six columns">
-            <label for="period">Period:</label>
-            <input class="u-full-width" type="text" placeholder="no. of members" id="period">
-          </div>
-
-          <div class="two columns">
-            <input class="button-primary" type="submit" value="Calculate">
-          </div>
-
+          <label for="noOfMembers">No. of members:</label>
+          <input class="u-full-width" type="text" placeholder="no. of members" id="noOfMembers">
+        </div>
+        <div class="six columns">
+          <label for="monthlyAmmount">Monthly ammount:</label>
+          <input class="u-full-width" type="text" placeholder="monthly ammount" id="monthlyAmmount">
         </div>
 
+        <div class="six columns">
+          <label for="period">Period:</label>
+          <input class="u-full-width" type="text" placeholder="no. of members" id="period">
+        </div>
 
+        <div class="two columns">
+          <input class="button-primary" type="submit" value="Calculate">
+        </div>
 
+      </div>
+
+      <div class="six columns">
+        <h2>Reality</h2>
 
         <div class="six columns">
-          <h2>Reality</h2>
+          <label for="monthOne">Month 1:</label>
+          <input class="u-full-width" type="text" placeholder="" id="monthOne">
+        </div>
+        <div class="six columns">
+          <label for="monthTwo">Month 2:</label>
+          <input class="u-full-width" type="text" placeholder="" id="monthTwo">
+        </div>
 
-          <div class="six columns">
-            <label for="monthOne">Month 1:</label>
-            <input class="u-full-width" type="text" placeholder="" id="monthOne">
-          </div>
-          <div class="six columns">
-            <label for="monthTwo">Month 2:</label>
-            <input class="u-full-width" type="text" placeholder="" id="monthTwo">
+        <div class="six columns">
+          <label for="monthThree">Month 3:</label>
+          <input class="u-full-width" type="text" placeholder="" id="monthThree">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="six columns">
+        <h5>Raising amount:</h5>
+        <div class="data">
+          <canvas id="graph" width="300" height="200"></canvas>
+        </div>
+
+      </div>
+      <div class="six columns">
+        <div class="">
+          <h5>Reality Amount</h5>
+            <div class="data">
+              <canvas id="graph2" width="300" height="200"></canvas>
+            </div>
           </div>
 
-          <div class="six columns">
-            <label for="monthThree">Month 3:</label>
-            <input class="u-full-width" type="text" placeholder="" id="monthThree">
-          </div>
         </div>
 
     </div>
+
   </div>
-  <div class="firstpage">
-    <h6>Raising amount:</h6>
 
-
+  <script src="./stockvelGraph/graph.js" charset="utf-8"></script>
 </body>
 
 </html>
