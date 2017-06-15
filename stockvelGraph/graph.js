@@ -38,14 +38,14 @@ var realityDataset = {
     "Aug", "Sept", "Oct", "Nov", "Dec"],
     datasets: [
       {
-          label: 'Theory',
-          data: [],
-          backgroundColor: _.take(colors, 12),
-      },
-      {
         label: 'Reality',
         data: [],
         backgroundColor: _.take(colors, 12),
+      },
+      {
+          label: 'Theory',
+          data: [],
+          backgroundColor: _.take(colors, 12),
       },
 
 
