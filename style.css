@@ -21,6 +21,8 @@ body{
 }
 
 .topnav {
+    text-align: center;
+    color: white;
     height: 40px;
     width: 100%;
     background-color: #333;
